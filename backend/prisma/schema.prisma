@@ -1,0 +1,167 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Faculty {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  title         String
+  qualification String
+  image         String?  
+  department    Department @relation(fields: [departmentId], references: [id])
+  departmentId String    @db.ObjectId
+}
+
+model Department {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  name      String    @unique
+  faculties Faculty[]
+}
+
+
+model Admin {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  username  String   @unique
+  password  String
+  passkey   String
+}
+
+
+model News {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  title        String
+  content      String
+  initialDate  DateTime
+  finalDate    DateTime
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Event {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  content   String
+  eventDate DateTime
+  image     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SeniorOfficer {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  designation String
+  bps         String
+  sanctioned  String
+  working     String
+  vacancy     String
+  remarks     String
+}
+
+model JuniorOfficer {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  designation String
+  bps         String
+  sanctioned  String
+  working     String
+  vacancy     String
+  remarks     String
+}
+model CommerceXii {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  time_slot String
+  mon       String
+  tue       String
+  wed       String
+  thu       String
+  fri       String
+  sat       String
+  sun       String
+}
+
+model CommerceXi {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  time_slot String
+  mon       String
+  tue       String
+  wed       String
+  thu       String
+  fri       String
+  sat       String
+  sun       String
+}
+
+model EngXii {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  time_slot String
+  mon       String
+  tue       String
+  wed       String
+  thu       String
+  fri       String
+  sat       String
+  sun       String
+}
+
+model EngXi {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  time_slot String
+  mon       String
+  tue       String
+  wed       String
+  thu       String
+  fri       String
+  sat       String
+  sun       String
+}
+
+model MedXi {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  timeSlot  String
+  mon       String
+  tue       String
+  wed       String
+  thu       String
+  fri       String
+  sat       String
+  sun       String
+}
+model Medxii {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  time_slot String
+  mon       String
+  tue       String
+  wed       String
+  thu       String
+  fri       String
+  sat       String
+  sun       String
+}
+
+model GenSciXi {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  time_slot String
+  mon       String
+  tue       String
+  wed       String
+  thu       String
+  fri       String
+  sat       String
+  sun       String
+}
+
+model GenSciXii {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  time_slot String
+  mon       String
+  tue       String
+  wed       String
+  thu       String
+  fri       String
+  sat       String
+  sun       String
+}
