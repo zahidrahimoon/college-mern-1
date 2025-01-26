@@ -1,5 +1,3 @@
-import principal from '../assets/principal.jpg';
-
 const Principal = () => {
   return (
     <section className="bg-gray-100 py-16 border-black border-b font-serif">
@@ -20,7 +18,7 @@ const Principal = () => {
         </div>
         <div className="md:w-1/3 flex justify-center order-1 md:order-2">
           <img 
-            src={principal} 
+            src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737891181/principle_fllcbf.jpg' 
             alt="Principal" 
             className="rounded-full border-4 border-red-500"
           />

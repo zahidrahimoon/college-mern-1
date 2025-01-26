@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaCalendarAlt, FaEdit, FaTrashAlt } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import UpdateEvent from './UpdateEvent'; // Import the UpdateEvent component
+import UpdateEvent from './UpdateEvent';
 
 const EventList = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [editEvent, setEditEvent] = useState(null); // State for the event being edited
+  const [editEvent, setEditEvent] = useState(null);
 
   // Fetch events from the backend
   useEffect(() => {
@@ -41,21 +41,19 @@ const EventList = () => {
 
   // Handle edit event
   const handleEdit = (event) => {
-    setEditEvent(event); // Set the event to be edited
+    setEditEvent(event);
   };
 
-  // Handle canceling the edit
   const handleCancelEdit = () => {
-    setEditEvent(null); // Close the edit form
+    setEditEvent(null);
   };
 
-  // Handle event update
   const handleUpdateEvent = () => {
-    setEditEvent(null); // Close the edit form
+    setEditEvent(null);
     const fetchEvents = async () => {
       try {
         const response = await axios.get('http://localhost:3000/api/events');
-        setEvents(response.data); // Refresh the events list
+        setEvents(response.data);
       } catch (error) {
         console.error('Error fetching events:', error);
       }
@@ -63,7 +61,6 @@ const EventList = () => {
 
     fetchEvents();
   };
-
 
   return (
     <div className="w-full max-w-full bg-gray-900 text-black px-4 py-8 mx-auto ml-4">
@@ -93,7 +90,9 @@ const EventList = () => {
               )}
               <h3 className="text-xl font-semibold text-white">{title}</h3>
               <p className="text-white">{content}</p>
-              <p className="text-sm text-gray-300">Event Date: {event_date}</p>
+              <p className="text-sm text-gray-300">
+                Event Date: {new Date(event_date).toLocaleDateString()}
+              </p>
               <div className="flex justify-end space-x-2">
                 <button
                   className="text-blue-400 hover:text-blue-300"

@@ -1,12 +1,10 @@
-
-import quaid from '../assets/qauid-e-Azam.jpg'
 const Quaid = () => {
   return (
     <section className="bg-white py-16 border-black border-b font-serif">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div className="md:w-1/3 flex justify-center">
           <img 
-            src={quaid} 
+            src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884459/qauid-e-Azam_bjdqdz.jpg' 
             alt="Founder of the Nation" 
             className="rounded-full border-4 border-red-500"
           />    

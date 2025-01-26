@@ -13,7 +13,7 @@ const AdminPopup = () => {
   useEffect(() => {
     const fetchPopupData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/popup');
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/popup`);
         const data = response.data;
         if (Array.isArray(data) && data.length > 0) {
           setPopupData(data[0]);
@@ -50,7 +50,7 @@ const AdminPopup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3000/api/popup/${popupData.id}`, formData);
+      await axios.put(`${import.meta.env.VITE_BASE_URL}/api/popup/${popupData.id}`, formData);
       toast.success('Popup updated successfully');
       setPopupData(formData);
       setEditMode(false);

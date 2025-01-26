@@ -16,7 +16,7 @@ const ContactForm = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        'http://localhost:3000/api/send/mail',
+        `${import.meta.env.VITE_BASE_URL}/api/send/mail`,
         { name, email, message },
         {
           withCredentials: true,

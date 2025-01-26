@@ -21,7 +21,7 @@ const NewsComponent = () => {
       return;
     }
     try {
-      await axios.post('http://localhost:3000/api/news', newsData);
+      await axios.post(`${import.meta.env.VITE_BASE_URL}/api/news`, newsData);
       toast.success('News added successfully!');
       setNewsData({ title: '', content: '', initialDate: '', finalDate: '' });
     } catch (error) {

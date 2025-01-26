@@ -14,7 +14,7 @@ const NewsList = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/news");
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/news`);
         setNews(response.data.news || []); // Ensure data exists before accessing
       } catch (error) {
         console.error("Error fetching news:", error);
@@ -31,7 +31,7 @@ const NewsList = () => {
   const handleDelete = async (id) => {
     setLoading(true); // Show loading spinner when deleting
     try {
-      await axios.delete(`http://localhost:3000/api/news/${id}`);
+      await axios.delete(`${import.meta.env.VITE_BASE_URL}/api/news/${id}`);
       setNews(news.filter((item) => item.id !== id)); // Update state after deletion
       toast.success("News deleted successfully!");
     } catch (error) {

@@ -1,48 +1,37 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import decoration from '../assets/decorationone.png';
-import commerce from '../assets/commerce.jpg';
-import cs from '../assets/computer.avif';
-import engineering from '../assets/preengineering.avif';
-import medical from '../assets/premedical.avif';
 
 const milestones = [
   {
     title: 'Milestone 1',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
-    image: cs,
+    image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885479/milestone_gom2mt.jpg',
     link: '/',
   },
   {
     title: 'Milestone 2',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
-    image: engineering,
+    image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885480/milestone3_mjagux.jpg',
     link: '/',
   },
   {
     title: 'Milestone 3',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
-    image: commerce,
+    image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885480/milestone2_u2dd9r.webp',
     link: '/',
   },
   {
     title: 'Milestone 4',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
-    image: medical,
+    image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885480/milestone1_srlk5d.jpg',
     link: './',
   },
   {
     title: 'Milestone 5',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
-    image: cs,
+    image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885616/milestone4_etgype.jpg',
     link: '/',
-  },
-  {
-    title: 'Milestone 6',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
-    image: engineering,
-    link: '/',
-  },
+  }
 ];
 
 const responsive = {
@@ -69,7 +58,7 @@ const MilestoneCarousel = () => {
     <section className="py-12 px-8 bg-gray-100 text-center border-b border-black border-t">
       <h2 className="text-3xl font-serif mb-8">Milestones at a Glance</h2>
       <div className="flex flex-col items-center">
-        <img src={decoration} className="mb-8" alt="Decoration" />
+        <img src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884456/decorationone_ksjdfm.png' className="mb-8" alt="Decoration" />
       </div>
       <Carousel
         responsive={responsive}

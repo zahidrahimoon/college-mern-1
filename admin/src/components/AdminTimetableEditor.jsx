@@ -53,7 +53,7 @@ const AdminTimetableEditor = ({ apiEndpoint, title }) => {
       return;
     }
     try {
-      const response = await axios.put(`http://localhost:3000${apiEndpoint}/${editedSlot.id}`, editedSlot);
+      const response = await axios.put(`${import.meta.env.VITE_BASE_URL}${apiEndpoint}/${editedSlot.id}`, editedSlot);
       if (response.status === 200) {
         toast.success('Schedule updated successfully!');
         setEditMode(false);

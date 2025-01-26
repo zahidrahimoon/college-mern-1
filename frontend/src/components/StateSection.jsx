@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import useCountUp from '../Hooks/useCountUp.js';
-import heroBg from '../assets/background.avif';
+
 
 const stats = [
   { icon: '🎓', value: 5400, label: 'Enrolled Students' },
@@ -14,7 +14,7 @@ const StatsSection = () => {
     <div
       className="relative bg-cover bg-center py-10 border-b border-black"
       style={{
-        backgroundImage: `url(${heroBg})`,
+        backgroundImage: `url('https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884464/background_rofawk.avif')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         padding: '5% 0', // Responsive padding

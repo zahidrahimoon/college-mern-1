@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import decoration from '../assets/decorationone.png';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -31,7 +30,7 @@ const FAQ = () => {
     <div className="p-6 max-w-full mx-auto w-full md:w-[80%] lg:w-[70%]">
       <h2 className="text-xl md:text-2xl lg:text-3xl mb-4 font-serif text-center mt-6 font-semibold">Frequently Asked Questions</h2>
       <div className="flex flex-col items-center">
-        <img src={decoration} className="mb-8 w-24 md:w-32 lg:w-40" alt="Decoration" />
+        <img src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884456/decorationone_ksjdfm.png' className="mb-8 w-24 md:w-32 lg:w-40" alt="Decoration" />
       </div>
       <ul className="space-y-4">
         {faqs.map((faq, index) => (

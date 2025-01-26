@@ -15,7 +15,7 @@ const AddFaculty = ({ onFacultyAdded }) => {
 
   useEffect(() => {
     // Fetch department names
-    axios.get('http://localhost:3000/api/departments').then((response) => {
+    axios.get(`${import.meta.env.VITE_BASE_URL}/api/departments`).then((response) => {
       setDepartments(response.data);
     });
   }, []);
@@ -42,7 +42,7 @@ const AddFaculty = ({ onFacultyAdded }) => {
       formDataObj.append(key, formData[key]);
     }
     try {
-      await axios.post('http://localhost:3000/api/faculty', formDataObj);
+      await axios.post(`${import.meta.env.VITE_BASE_URL}/api/faculty`, formDataObj);
       toast.success('Faculty added successfully!');
       setFormData({ name: '', title: '', qualification: '', department_name: '', image: null });
       onFacultyAdded();

@@ -11,7 +11,7 @@ const EditNews = ({ news, onBack }) => {
   // Inside EditNews component
 const handleUpdate = async (updatedItem) => {
   try {
-    await axios.put(`http://localhost:3000/api/news/${updatedItem.id}`, updatedItem);
+    await axios.put(`${import.meta.env.VITE_BASE_URL}/api/news/${updatedItem.id}`, updatedItem);
     onUpdate(updatedItem); // Pass the updated news item back to the parent
     toast.success("News updated successfully!");
   } catch (error) {
@@ -32,7 +32,7 @@ const handleUpdate = async (updatedItem) => {
       };
 
       // Send the update request
-      await axios.put(`http://localhost:3000/api/news/${news.id}`, updatedNews);
+      await axios.put(`${import.meta.env.VITE_BASE_URL}/api/news/${news.id}`, updatedNews);
       toast.success("News updated successfully!");
       onBack(); // Navigate back to the list
     } catch (error) {

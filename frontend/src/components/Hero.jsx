@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
-import hero from '../assets/college-hero.jfif';
 
 const Hero = () => {
   const { scrollY } = useViewportScroll();
@@ -17,7 +16,7 @@ const Hero = () => {
   return (
     <div className="relative w-full h-[600px] overflow-hidden">
       <motion.img
-        src={hero}
+        src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884600/college_h6vny9.jpg'
         alt="Hero"
         className="absolute w-full h-full object-cover"
         style={{ y: y1 }}

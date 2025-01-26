@@ -1,6 +1,4 @@
-// src/Timeline.js
 import React from 'react';
-import decoration from "../assets/decorationtwo.png";
 
 const milestones = [
   { year: "2004", icon: "📚", description: "Commerce" },
@@ -15,7 +13,7 @@ const Timeline = () => {
       <div className="container mx-auto text-center px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">SHAPING INTO REALITY</h2>
         <div className="flex justify-center mb-8">
-          <img src={decoration} className="w-24 h-auto" alt="Decoration" />
+          <img src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884456/decorationone_ksjdfm.png' className="w-24 h-auto" alt="Decoration" />
         </div>
         <p className="max-w-lg md:max-w-2xl mx-auto mb-8 md:mb-12">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo vitae

@@ -17,10 +17,10 @@ const FacultyList = () => {
     const fetchFacultyData = async () => {
       try {
         // Fetch faculty data
-        const facultyResponse = await axios.get("http://localhost:3000/api/faculty");
+        const facultyResponse = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/faculty`);
 
         // Fetch department data
-        const departmentResponse = await axios.get("http://localhost:3000/api/departments");
+        const departmentResponse = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/departments`);
 
         // Group faculty data by department
         const grouped = facultyResponse.data.reduce((acc, member) => {
@@ -55,7 +55,7 @@ const FacultyList = () => {
         formData.append(key, updatedData[key]);
       }
       const response = await axios.put(
-        `http://localhost:3000/api/faculty/${selectedFaculty.id}`,
+        `${import.meta.env.VITE_BASE_URL}/api/faculty/${selectedFaculty.id}`,
         formData
       );
       toast.success("Faculty updated successfully!");

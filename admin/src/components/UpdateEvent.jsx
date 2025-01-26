@@ -18,7 +18,7 @@ const UpdateEvent = ({ event, onUpdateEvent, onCancel }) => {
     formData.append('image', image || event.image); // Use existing image if no new image is selected
 
     try {
-      await axios.put(`http://localhost:3000/api/events/${event.id}`, formData, {
+      await axios.put(`${import.meta.env.VITE_BASE_URL}/api/events/${event.id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

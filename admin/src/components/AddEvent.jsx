@@ -19,7 +19,7 @@ const AddEvent = ({ onEventAdded }) => {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('http://localhost:3000/api/events', formData, {
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/events`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

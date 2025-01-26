@@ -1,8 +1,3 @@
-import decoration from '../assets/decorationone.png';
-import commerce from '../assets/commerce.jpg';
-import cs from '../assets/computer.avif';
-import engineering from '../assets/preengineering.avif';
-import medical from '../assets/premedical.avif';
 import { motion } from 'framer-motion';
 // import { Link } from 'react-router-dom';
 
@@ -12,22 +7,22 @@ const ChooseField = () => {
     {
       title: 'Commerce',
       description: 'The Commerce group includes subjects such as Accounting, Banking, Principles of Commerce, Commercial Geography, Business Studies, Economics, and Statistics.The Commerce group includes subjects such as Accounting, Banking, Principles of Commerce, Commercial Geography, Business Studies, Economics, and Statistics.The Commerce group includes subjects such as Accounting, Banking, Principles of Commerce, Commercial Geography, Business Studies, Economics, and Statistics.The Commerce group includes subjects such as Accounting, Banking, Principles of Commerce, Commercial Geography, Business Studies, Economics, and Statistics.The Commerce group includes subjects such as Accounting, Banking, Principles of Commerce, Commercial Geography, Business Studies, Economics, and Statistics.',
-      image: commerce
+      image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884466/commerce_g6efty.jpg'
     },
     {
       title: 'Pre-Engineering',
       description: 'The Pre-Engineering group covers various engineering fields including Civil, Electrical, Mechanical, Aeronautical, Architectural, Telecom, Chemical, Space & others.The Pre-Engineering group covers various engineering fields including Civil, Electrical, Mechanical, Aeronautical, Architectural, Telecom, Chemical, Space & others.The Pre-Engineering group covers various engineering fields including Civil, Electrical, Mechanical, Aeronautical, Architectural, Telecom, Chemical, Space & others.The Pre-Engineering group covers various engineering fields including Civil, Electrical, Mechanical, Aeronautical, Architectural, Telecom, Chemical, Space & others.The Pre-Engineering group covers various engineering fields including Civil, Electrical, Mechanical, Aeronautical, Architectural, Telecom, Chemical, Space & others.',
-      image: engineering
+      image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884459/preengineering_jtoqhx.avif'
     },
     {
       title: 'Pre-Medical',
       description: 'The Pre-Medical group serves as a gateway to professions like physiotherapy, surgery, pharmacy, microbiology, and more.The Pre-Medical group serves as a gateway to professions like physiotherapy, surgery, pharmacy, microbiology, and more.The Pre-Medical group serves as a gateway to professions like physiotherapy, surgery, pharmacy, microbiology, and more.The Pre-Medical group serves as a gateway to professions like physiotherapy, surgery, pharmacy, microbiology, and more.The Pre-Medical group serves as a gateway to professions like physiotherapy, surgery, pharmacy, microbiology, and more.The Pre-Medical group serves as a gateway to professions like physiotherapy, surgery, pharmacy, microbiology, and more.The Pre-Medical group serves as a gateway to professions like physiotherapy, surgery, pharmacy, microbiology, and more.',
-      image: medical
+      image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884459/premedical_egvsw2.avif'
     },
     {
       title: 'Computer Science',
       description: 'The Computer Science group focuses on Physics, Computer Science, and Mathematics, with practicals in programming languages.The Computer Science group focuses on Physics, Computer Science, and Mathematics, with practicals in programming languages.The Computer Science group focuses on Physics, Computer Science, and Mathematics, with practicals in programming languages.The Computer Science group focuses on Physics, Computer Science, and Mathematics, with practicals in programming languages.The Computer Science group focuses on Physics, Computer Science, and Mathematics, with practicals in programming languages.The Computer Science group focuses on Physics, Computer Science, and Mathematics, with practicals in programming languages.',
-      image: cs
+      image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884465/computer_kumdzo.avif'
     },
   ];
 
@@ -35,7 +30,7 @@ const ChooseField = () => {
     <section className="text-center py-8 px-8 bg-gray-100 border-black border-b ">
       <h2 className="text-3xl font-serif mb-8">Choose Your Field of Study</h2>
       <div className="flex flex-col items-center">
-        <img src={decoration} className="mb-8" alt="Decoration" />
+        <img src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884456/decorationone_ksjdfm.png' className="mb-8" alt="Decoration" />
       </div>
       <div className="flex flex-wrap justify-center lg:flex-nowrap gap-6 ">
         {fields.map((field, index) => (

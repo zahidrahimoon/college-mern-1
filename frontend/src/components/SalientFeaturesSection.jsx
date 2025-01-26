@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { FaUserGraduate, FaBook, FaFlask, FaHandsHelping } from 'react-icons/fa'; // Importing icons from react-icons
+import { FaUserGraduate, FaBook, FaFlask, FaHandsHelping } from 'react-icons/fa'; 
 import SalientFeatureItem from './SalientFeatureItem';
-import decoration from '../assets/decorationone.png';
 
 const SalientFeaturesSection = () => {
   return (
@@ -16,7 +15,7 @@ const SalientFeaturesSection = () => {
           Salient Features
         </motion.h2>
         <div className="flex flex-col items-center">
-          <img src={decoration} className="mb-8" alt="Decoration" />
+          <img src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884456/decorationone_ksjdfm.png' className="mb-8" alt="Decoration" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <SalientFeatureItem

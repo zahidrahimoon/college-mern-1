@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import decoration from '../assets/decorationone.png';
 import axios from 'axios';
 import { FaCalendarAlt } from 'react-icons/fa';
 
@@ -11,7 +10,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/events');
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/events`);
         setEvents(response.data);
         setLoading(false);
       } catch (error) {
@@ -29,7 +28,7 @@ const Events = () => {
       <div className="container mx-auto w-full max-w-screen-xl">
         <h1 className="text-4xl text-center mb-8">Events</h1>
         <div className="flex flex-col items-center">
-          <img src={decoration} className="mb-8" alt="Decorative element" />
+          <img src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884456/decorationone_ksjdfm.png' className="mb-8" alt="Decorative element" />
         </div>
         {loading ? (
           <p className="text-center text-gray-500">Loading events...</p>

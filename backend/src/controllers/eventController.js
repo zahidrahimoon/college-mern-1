@@ -1,6 +1,7 @@
 import { createEvent as createEventModel, getEvents as getEventsModel, deleteEvent as deleteEventModel, editEvent as editEventModel } from '../models/eventModel.js';
 
 // Create a new event
+
 export const createEvent = async (req, res) => {
   const { title, content, event_date } = req.body;
   const image = req.file ? req.file.filename : null;

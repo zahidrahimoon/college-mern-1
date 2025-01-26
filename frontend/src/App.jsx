@@ -19,7 +19,6 @@ import RegistrationForm from './Pages/RegistrationForm.jsx';
 import SamplePaper from './Pages/SamplePaper.jsx';
 import Uniform from './Pages/Uniform.jsx';
 import StudentTimeTable from './Pages/StudentTimeTable.jsx';
-import AdmissionProcess from './Pages/AdmissionProcess.jsx';
 import MiniNavbar from './components/Mininavbar.jsx';
 // import Loader from './components/Loader.jsx'; 
 
@@ -46,7 +45,6 @@ function App() {
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/RegistrationForm" element={<RegistrationForm />} />
         <Route path="/SamplePaper" element={<SamplePaper />} />
-        <Route path="/admissionProcess" element={<AdmissionProcess />} />
         <Route path="/uniform" element={<Uniform />} />
         <Route path="/StudentTimeTable" element={<StudentTimeTable />} />
       </Route>

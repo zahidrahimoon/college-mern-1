@@ -11,7 +11,7 @@ const GoogleSheetTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/sheet');
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/sheet`);
         setData(response.data || []);
         setLoading(false);
       } catch (error) {

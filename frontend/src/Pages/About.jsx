@@ -1,6 +1,5 @@
 // import Hero from '../components/Hero.jsx'
 import PageHeader from '../components/PageHeader.jsx'
-import college from '../assets/college-hero.jfif';
 import Footer from '../components/Footer.jsx';
 import TimelineSection from '../components/TimelineSection.jsx';
 import Quaid from '../components/Quaid.jsx';
@@ -11,7 +10,7 @@ import FullWidthImage from '../components/FullWidthImage.jsx';
 
 const About = () => {
   const headerData = {
-    backgroundImage: college,
+    backgroundImage: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884600/college_h6vny9.jpg',
     title: 'About Us',
     subtitle: 'Learn more about our mission and values',
     buttonText: ''

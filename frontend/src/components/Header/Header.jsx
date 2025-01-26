@@ -2,7 +2,6 @@ import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.png";
-import pakflag from "../../assets/pakistanlogo.avif";
 import "./Header.css";
 
 const Header = () => {
@@ -24,7 +23,6 @@ const Header = () => {
   const academicLinks = [
     { name: "Register Online", link: "/RegistrationForm" },
     { name: "Sample Paper", link: "/SamplePaper" },
-    { name: "Admission Process", link: "/admissionProcess" },
     { name: "Uniform", link: "/uniform" },
     { name: "Student TimeTable", link: "/StudentTimeTable" },
   ];
@@ -101,7 +99,7 @@ const Header = () => {
 
         <div className="hidden lg:flex items-center">
           <img
-            src={pakflag}
+            src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884458/pakistanlogo_avluy4.avif'
             alt="gdbc asifabad"
             className="w-16 h-auto rounded border-2 border-black shadow-lg"
           />

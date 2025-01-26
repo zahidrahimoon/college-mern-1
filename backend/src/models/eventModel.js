@@ -20,10 +20,10 @@ export const createEvent = async (title, content, eventDate, image) => {
 export const getEvents = async () => {
   const events = await prisma.event.findMany();
   return events.map((event) => ({
-    ...event,
-    eventDate: format(new Date(event.eventDate), 'MM/dd/yyyy'),
+    ...event
   }));
 };
+
 
 // Delete an event by ID
 export const deleteEvent = async (id) => {

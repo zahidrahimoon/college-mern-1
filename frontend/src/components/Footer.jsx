@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaFacebook, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import BackToTopButton from './BackToTopButton';
-import Logo from '../assets/logo.png'; // Adjust the path to your logo
+import Logo from '../assets/logo.png'; 
 
 const Footer = () => {
   return (

@@ -12,7 +12,7 @@ const JuniorOfficers = () => {
 
   const fetchSeniorData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/juniorofficers');
+      const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/juniorofficers`);
       if (Array.isArray(response.data)) {
         setSeniorData(response.data);
       } else {
@@ -29,7 +29,7 @@ const JuniorOfficers = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:3000/api/juniorofficers/${editingOfficer.id}`, editingOfficer);
+      await axios.put(`${import.meta.env.VITE_BASE_URL}/api/juniorofficers/${editingOfficer.id}`, editingOfficer);
       fetchSeniorData(); // Refresh data
       setEditingOfficer(null); // Close edit mode
     } catch (error) {

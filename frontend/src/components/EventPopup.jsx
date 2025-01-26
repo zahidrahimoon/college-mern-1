@@ -18,7 +18,7 @@ const EventPopup = () => {
   useEffect(() => {
     if (isOpen) {
       axios
-        .get('http://localhost:3000/api/popup')
+        .get(`${import.meta.env.VITE_BASE_URL}/api/popup`)
         .then((response) => {
           const data = response.data;
           if (Array.isArray(data)) {
@@ -39,23 +39,23 @@ const EventPopup = () => {
 
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-70 flex justify-center items-center">
-      <div className="p-6 rounded-lg shadow-lg w-11/12 max-w-lg" style={{ backgroundColor: background_color }}>
+      <div className="p-6 rounded-lg shadow-lg w-11/12 max-w-lg" style={{ backgroundColor: background_color || 'gray' }}>
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-semibold" style={{ color: text_color }}>{title}</h2>
+          <h2 className="text-2xl font-semibold" style={{ color: text_color || 'white' }}>{title}</h2>
           <button onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white transition-colors">
             <FaTimes className="text-2xl" />
           </button>
         </div>
         <div className="flex items-start space-x-4 mb-4">
-          <FaCalendarAlt className="text-3xl" style={{ color: text_color }} />
+          <FaCalendarAlt className="text-3xl" style={{ color: text_color || 'white' }} />
           <div className="text-gray-200">
-            <h3 className="text-xl font-semibold" style={{ color: text_color }}>{description}</h3>
+            <h3 className="text-xl font-semibold" style={{ color: text_color || 'white' }}>{description}</h3>
             <p className="text-gray-300">Start Date: {start_date}</p>
             <p className="text-gray-300">End Date: {end_date}</p>
           </div>
         </div>
         <div className="flex items-center space-x-2 mb-4">
-          <FaUserGraduate className="text-xl" style={{ color: text_color }} />
+          <FaUserGraduate className="text-xl" style={{ color: text_color || 'white' }} />
           <p className="text-gray-300">Open for all students. Secure your place today!</p>
         </div>
         <div className="flex justify-between items-center mt-4">

@@ -17,7 +17,7 @@ const SeniorOfficers = () => {
     try {
       setLoading(true); // Set loading state
       const response = await axios.get(
-        "http://localhost:3000/api/seniorofficers"
+        `${import.meta.env.VITE_BASE_URL}/api/seniorofficers`
       );
       if (Array.isArray(response.data)) {
         setSeniorData(response.data);
@@ -40,7 +40,7 @@ const SeniorOfficers = () => {
     try {
       setLoading(true);
       await axios.put(
-        `http://localhost:3000/api/seniorofficers/${editingOfficer.id}`,
+        `${import.meta.env.VITE_BASE_URL}/api/seniorofficers/${editingOfficer.id}`,
         editingOfficer
       );
       fetchSeniorData();

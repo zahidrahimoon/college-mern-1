@@ -1,6 +1,3 @@
-import decoration from "../assets/decorationone.png";
-import pdfIcon from "../assets/pdf-icon.png"; 
-
 const PdfSection = () => {
   const pdfs = [
     { id: 1, title: 'Commerce', link: 'https://example.com/commerce.pdf' },
@@ -15,7 +12,7 @@ const PdfSection = () => {
         Sample Test Papers
       </h1>
       <div className="flex flex-col items-center">
-        <img src={decoration} className="mb-6 md:mb-8 mt-4 md:mt-6" alt="Decoration" />
+        <img src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884456/decorationone_ksjdfm.png' className="mb-6 md:mb-8 mt-4 md:mt-6" alt="Decoration" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 md:gap-12">
         {pdfs.map(pdf => (
@@ -26,7 +23,7 @@ const PdfSection = () => {
               rel="noopener noreferrer"
               className="flex flex-col items-center"
             >
-              <img src={pdfIcon} alt={pdf.title} className="w-24 md:w-36 h-24 md:h-36" />  {/* Adjusted size for responsiveness */}
+              <img src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884457/pdf-icon_jey63n.png' alt={pdf.title} className="w-24 md:w-36 h-24 md:h-36" />  {/* Adjusted size for responsiveness */}
             </a>
             <h3 className="text-xl md:text-2xl font-medium md:font-semibold">
               {pdf.title}

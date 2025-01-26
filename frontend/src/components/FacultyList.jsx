@@ -1,43 +1,100 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import FacultyDropdown from './FacultyDropdown';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import decoration from '../assets/decorationone.png';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Circles } from "react-loader-spinner"; 
+import FacultyDropdown from "./FacultyDropdown";
 
 const FacultyList = () => {
   const [facultyData, setFacultyData] = useState([]);
+  const [groupedFaculty, setGroupedFaculty] = useState({});
+  const [editModalOpen, setEditModalOpen] = useState(false);
+  const [selectedFaculty, setSelectedFaculty] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchFacultyData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/faculty');
-        if (response.data.length === 0) {
-          toast.info('No data found.');
-        }
-        setFacultyData(response.data);
+        // Fetch faculty data
+        const facultyResponse = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/faculty`);
+
+        // Fetch department data
+        const departmentResponse = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/departments`);
+
+        // Group faculty data by department
+        const grouped = facultyResponse.data.reduce((acc, member) => {
+          const departmentName = member.department ? member.department.name : "Unknown";
+          if (!acc[departmentName]) {
+            acc[departmentName] = [];
+          }
+          acc[departmentName].push(member);
+          return acc;
+        }, {});
+        setGroupedFaculty(grouped);
+        setFacultyData(facultyResponse.data);
       } catch (error) {
-        toast.error("Error fetching data.");
-        console.error("Error fetching data: ", error);
+        toast.error("Error fetching data: " + error.message);
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchData();
+    fetchFacultyData();
   }, []);
+
+  const handleEdit = (faculty) => {
+    setSelectedFaculty(faculty);
+    setEditModalOpen(true);
+  };
+
+  const handleUpdate = async (updatedData) => {
+    try {
+      const formData = new FormData();
+      for (const key in updatedData) {
+        formData.append(key, updatedData[key]);
+      }
+      const response = await axios.put(
+        `${import.meta.env.VITE_BASE_URL}/api/faculty/${selectedFaculty.id}`,
+        formData
+      );
+      toast.success("Faculty updated successfully!");
+      setFacultyData((prev) =>
+        prev.map((member) =>
+          member.id === selectedFaculty.id ? response.data : member
+        )
+      );
+      setEditModalOpen(false);
+    } catch (error) {
+      toast.error("Error updating faculty.");
+    }
+  };
 
   return (
     <div className="container mx-auto p-4 font-serif mt-8">
       <ToastContainer />
-      <h1 className="text-4xl mb-8 text-center font-serif">Our Experienced Faculty</h1>
-      <div className="flex flex-col items-center">
-      <img src={decoration} className="mb-8" alt="Decoration" />
-      </div>
-      {facultyData.length === 0 ? (
-        <p>No data found.</p>
+      
+      {loading ? (
+        <div className="flex justify-center items-center">
+          <Circles size={60} color="purple" /> 
+        </div>
       ) : (
-        facultyData.map((section, index) => (
-          <FacultyDropdown key={index} {...section} />
+        Object.keys(groupedFaculty).map((department) => (
+          <FacultyDropdown
+            key={department}
+            department={department}
+            members={groupedFaculty[department]}
+            onEdit={handleEdit}
+          />
         ))
+      )}
+
+      {editModalOpen && selectedFaculty && (
+        <EditFacultyModal
+          isOpen={editModalOpen}
+          onClose={() => setEditModalOpen(false)}
+          faculty={selectedFaculty}
+          onUpdate={handleUpdate}
+        />
       )}
     </div>
   );
