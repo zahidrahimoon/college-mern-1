@@ -10,8 +10,5 @@
         "src": "/api/(.*)",
         "dest": "/src/index.js"
       }
-    ],
-    "hooks": {
-        "build": "prisma generate"
-    }
+    ]
   }
