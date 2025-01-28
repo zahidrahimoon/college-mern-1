@@ -71,8 +71,18 @@ app.use('/api/', seniorOfficerRoutes);
 app.use('/api', popupRoutes);
 app.use('/api/departments', departmentRoutes);
 
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server listening at port ${PORT}`);
-});
+// Function export for Vercel
+const handler = async (req, res) => {
+  // Use app as a handler
+  app(req, res);
+};
+
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`Server listening at port ${PORT}`);
+  });
+}
+
+export default handler;
