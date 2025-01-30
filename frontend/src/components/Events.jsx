@@ -44,7 +44,7 @@ const Events = () => {
                 {image && (
                   <div className="relative group">
                     <img 
-                      src={`http://localhost:3000/uploads/${image}`}
+                      src={`${import.meta.env.VITE_BASE_URL}/uploads/${image}`}
                       alt={title}
                       className="w-full h-48 object-cover rounded-md mb-4 filter grayscale group-hover:grayscale-0 transition duration-300 ease-in-out"
                     />
