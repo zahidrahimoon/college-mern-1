@@ -1,18 +1,18 @@
 const WorkingCommitteeTable = () => {
   const members = [
-    { id: 1, name: 'Mr. Abdul Rauf Essa', designation: 'President' },
-    { id: 2, name: 'Mr. Irfan Z. Bawany', designation: 'Vice-President' },
-    { id: 3, name: 'Mr. Zakaria Ghaffar', designation: 'Vice-President' },
-    { id: 4, name: 'Mr. Ahmed Chinoy', designation: 'Vice-President' },
-    { id: 5, name: 'Mr. Amir Kothawala', designation: 'Vice-President' },
-    { id: 6, name: 'Mr. Usman Batliwala', designation: 'Hon. General Secretary' },
-    { id: 7, name: 'Mr. Altaf Hussain Vagher', designation: 'Hon. Joint Secretary' },
-    { id: 8, name: 'Mr. Ismail Bawany', designation: 'Member' },
-    { id: 9, name: 'Mr. Yacoob S. Tabani', designation: 'Member' },
-    { id: 10, name: 'Ms. Farida Ghaffar', designation: 'Member' },
-    { id: 11, name: 'Dr. Farooq Akbani', designation: 'Member' },
-    { id: 12, name: 'Mr. Irfan Dalia', designation: 'Member' },
-    { id: 13, name: 'Mr. Aslam Sharif', designation: 'Member' },
+    { id: 1, name: 'Mr. Muhammad Ali', designation: 'President' },
+    { id: 2, name: 'Mr. Ahmed Khan', designation: 'Vice-President' },
+    { id: 3, name: 'Mr. Ali Hassan', designation: 'Vice-President' },
+    { id: 4, name: 'Mr. Imran Shah', designation: 'Vice-President' },
+    { id: 5, name: 'Mr. Bilal Ahmed', designation: 'Vice-President' },
+    { id: 6, name: 'Mr. Usman Khan', designation: 'Hon. General Secretary' },
+    { id: 7, name: 'Mr. Muhammad Iqbal', designation: 'Hon. Joint Secretary' },
+    { id: 8, name: 'Mr. Asad Ali', designation: 'Member' },
+    { id: 9, name: 'Mr. Fahad Khan', designation: 'Member' },
+    { id: 10, name: 'Ms. Ayesha Khan', designation: 'Member' },
+    { id: 11, name: 'Dr. Muhammad Asif', designation: 'Member' },
+    { id: 12, name: 'Mr. Ali Raza', designation: 'Member' },
+    { id: 13, name: 'Mr. Muhammad Amir', designation: 'Member' },
   ];
 
   return (

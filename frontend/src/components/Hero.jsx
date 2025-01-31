@@ -47,7 +47,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.5 }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis unde atque at.
+            Unlock your academic potential at our esteemed institution, where innovation and excellence converge.
           </motion.p>
           <motion.button
             className="bg-transparent border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black transition text-sm sm:text-base md:text-lg lg:text-xl"

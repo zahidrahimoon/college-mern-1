@@ -12,19 +12,19 @@ const Header = () => {
 
   const Links = [
     { name: "Home", link: "/" },
-    { name: "About Us", link: "/About" },
-    { name: "Faculty & Staff", link: "/FacultyAndStaff" },
-    { name: "Academics", link: '/RegistrationForm', hasDropdown: true },
-    { name: "Galleries", link: "/Galleries" },
-    { name: "News & Updates", link: "/NewsAndUpdates" },
-    { name: "Contact Us", link: "/ContactUs" },
+    { name: "About Us", link: "/about" },
+    { name: "Faculty & Staff", link: "/faculty" },
+    { name: "Academics", link: '/registrationform', hasDropdown: true },
+    { name: "Galleries", link: "/galleries" },
+    { name: "News & Updates", link: "/news" },
+    { name: "Contact Us", link: "/contactus" },
   ];
 
   const academicLinks = [
-    { name: "Register Online", link: "/RegistrationForm" },
-    { name: "Sample Paper", link: "/SamplePaper" },
+    { name: "Register Online", link: "/registrationform" },
+    { name: "Sample Paper", link: "/samplepaper" },
     { name: "Uniform", link: "/uniform" },
-    { name: "Student TimeTable", link: "/StudentTimeTable" },
+    { name: "Student TimeTable", link: "/studenttimetable" },
   ];
 
   const handleMouseEnter = (link) => {
@@ -53,9 +53,9 @@ const Header = () => {
     <div className="w-full bg-gray-900 text-white relative">
       <div className="md:px-10 py-4 px-7 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <img src={logo} alt="gdbc asifabad" className="w-16 h-auto" />
+          <img src={logo} alt="Rahimoon Institute" className="w-16 h-auto" />
           <span className="font-semibold text-xl leading-none font-serif">
-            GDBC ASSIFABAD
+            Rahimoon Institute
           </span>
         </div>
 
@@ -100,7 +100,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center">
           <img
             src='https://res.cloudinary.com/dzr3drmyk/image/upload/v1737884458/pakistanlogo_avluy4.avif'
-            alt="gdbc asifabad"
+            alt="Rahimoon Institute"
             className="w-16 h-auto rounded border-2 border-black shadow-lg"
           />
         </div>
@@ -111,9 +111,9 @@ const Header = () => {
             className="text-gray-800 hover:text-green-600"
           >
             {isMobileMenuOpen ? (
-              <FiX className="w-7 h-7" />
+              <FiX className="w-7 h-7"  />
             ) : (
-              <FiMenu className="w-7 h-7" />
+              <FiMenu className="w-7 h-7 text-white" />
             )}
           </button>
         </div>

@@ -1,11 +1,20 @@
-import React from 'react';
+import { motion } from "framer-motion"
 
 const Loader = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="animate-spin rounded-full h-32 w-32 border-t-4 border-purple-500"></div>
-    </div>
-  );
-};
+    <motion.div
+      className="w-16 h-16 bg-gradient-to-r from-soothing-blue to-soothing-purple rounded-full shadow-lg"
+      animate={{
+        rotate: 360,
+      }}
+      transition={{
+        duration: 1,
+        repeat: Number.POSITIVE_INFINITY,
+        ease: "linear",
+      }}
+    />
+  )
+}
 
-export default Loader;
+export default Loader
+

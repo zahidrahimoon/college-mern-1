@@ -79,7 +79,7 @@ const EventList = () => {
               {image && (
                 <div className="relative group">
                   <img
-                    src={`http://localhost:3000/uploads/${image}`}
+                    src={`https://res.cloudinary.com/dzr3drmyk/image/upload/f_auto,q_auto/v1/${image}`}
                     alt={title}
                     className="rounded-t-lg w-full h-56 object-cover border-b border-white"
                   />

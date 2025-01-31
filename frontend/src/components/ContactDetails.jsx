@@ -7,23 +7,23 @@ const ContactDetails = () => {
         <div className="details w-full md:w-1/2 px-4 mb-8 md:mb-0">
           <span className="text-md md:text-lg text-purple-600">Get in touch</span>
           <h2 className="text-2xl md:text-3xl font-semibold my-3 md:my-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem neque unde vero!
+            Rahimoon Institute - USA
           </h2>
           <div className="flex items-center mb-3 md:mb-4">
             <FaMapMarkerAlt className="text-purple-600 mr-2 text-lg md:text-xl" />
-            <p className="text-sm md:text-base">Al-Karam Studio LuckyOne</p>
+            <p className="text-sm md:text-base">Rahimoon Institute, 123 College Drive, Rahimoon City, USA</p>
           </div>
           <div className="flex items-center mb-3 md:mb-4">
             <FaEnvelope className="text-purple-600 mr-2 text-lg md:text-xl" />
-            <p className="text-sm md:text-base">info@example.com</p>
+            <p className="text-sm md:text-base">info@rahimooninstitute.edu</p>
           </div>
           <div className="flex items-center mb-3 md:mb-4">
             <FaPhoneAlt className="text-purple-600 mr-2 text-lg md:text-xl" />
-            <p className="text-sm md:text-base">+1 234 567 890</p>
+            <p className="text-sm md:text-base">+1 555 123 4567</p>
           </div>
           <div className="flex items-center mb-3 md:mb-4">
             <FaClock className="text-purple-600 mr-2 text-lg md:text-xl" />
-            <p className="text-sm md:text-base">Monday - Saturday: 11:00 AM - 2:00 PM</p>
+            <p className="text-sm md:text-base">Monday - Friday: 8:00 AM - 5:00 PM</p>
           </div>
         </div>
         <div className="w-full md:w-1/2 px-4">

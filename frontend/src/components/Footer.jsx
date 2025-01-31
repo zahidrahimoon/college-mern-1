@@ -107,7 +107,7 @@ const Footer = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <p className="text-gray-400 text-xs md:text-sm font-serif">
-          © Government Degree Boys College Asifabad. Design & Developed By 
+          © Rahimoon Institute. Design & Developed By 
           <a href="https://github.com/zahidrahimoon" className="text-purple-400 decoration-none"> Zahid Rahimoon</a>
         </p>
       </motion.div>

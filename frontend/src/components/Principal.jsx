@@ -13,7 +13,7 @@ const Principal = () => {
             “Education is the most powerful weapon which you can use to change the world. Our mission is to provide quality education and instill values of integrity, respect, and responsibility in our students to help them become leaders of tomorrow.”
           </p>
           <p className="text-gray-700 font-semibold">
-            Mushtaq Hussain, Principal <span className='text-purple-400'>GDBC ASSIFABAD</span>
+            Muhammad Zahid, Principal <span className='text-purple-400'>Rahimoon Institute</span>
           </p>
         </div>
         <div className="md:w-1/3 flex justify-center order-1 md:order-2">

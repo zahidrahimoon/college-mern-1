@@ -28,7 +28,6 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <EventPopup isOpen={isPopupOpen} onClose={closePopup} />
       <History />
       <ChooseField />
       <StateSection />

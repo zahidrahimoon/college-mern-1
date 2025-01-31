@@ -4,31 +4,31 @@ import 'react-multi-carousel/lib/styles.css';
 const milestones = [
   {
     title: 'Milestone 1',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
+    description: 'Establishment of the institution in 1995, marking the beginning of a new era in higher education. This milestone marked the start of a journey that would shape the future of education in the region. It was a significant step towards providing quality education to students from diverse backgrounds.',
     image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885479/milestone_gom2mt.jpg',
     link: '/',
   },
   {
     title: 'Milestone 2',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
+    description: 'Introduction of undergraduate programs in 2000, expanding academic offerings to cater to a broader student base. This expansion enabled the institution to reach a wider audience, offering a range of programs that catered to diverse interests and career aspirations. It was a significant step towards becoming a comprehensive educational institution.',
     image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885480/milestone3_mjagux.jpg',
     link: '/',
   },
   {
     title: 'Milestone 3',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
+    description: 'Launch of postgraduate programs in 2005, solidifying the institutions position as a hub for advanced learning. This launch marked a significant milestone in the institutions journey, as it began to offer advanced degrees that catered to students seeking specialized knowledge. It further established the institution as a center of excellence in higher education.',
     image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885480/milestone2_u2dd9r.webp',
     link: '/',
   },
   {
     title: 'Milestone 4',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
+    description: 'Accreditation by the National Assessment and Accreditation Council (NAAC) in 2010, recognizing the institutions commitment to quality education. This accreditation was a testament to the institutions commitment to maintaining high standards of education, research, and community engagement. It validated the institutions efforts to provide a world-class education to its students.',
     image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885480/milestone1_srlk5d.jpg',
     link: './',
   },
   {
     title: 'Milestone 5',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia cupiditate rem aspernatur temporibus aperiam vel saepe quidem necessitatibus dicta optio, repellendus porro similique sequi debitis repellat pariatur libero omnis recusandae veritatis ratione tempora illo. Vitae dolor, in ad cupiditate incidunt maiores accusantium possimus minus! Veritatis voluptas voluptatibus earum magni animi.',
+    description: 'Inauguration of the state-of-the-art research center in 2015, fostering innovation and collaboration among faculty and students. This research center marked a significant milestone in the institutions journey, as it provided a platform for interdisciplinary research and innovation. It enabled faculty and students to engage in cutting-edge research, driving innovation and entrepreneurship.',
     image: 'https://res.cloudinary.com/dzr3drmyk/image/upload/v1737885616/milestone4_etgype.jpg',
     link: '/',
   }

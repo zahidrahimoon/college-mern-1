@@ -28,23 +28,20 @@ const NewsList = () => {
 
   // Render the loader and news list
   return (
-    <div className="px-4 py-4 bg-gray-200 text-black"> 
-      <h1 className="text-4xl text-center mb-8 text-black">
-        News & Updates
-      </h1>
+    <div className="px-4 py-4 mt-4 text-black"> 
 
       {/* Show loader if loading */}
       {loading ? (
         <div className="flex justify-center items-center py-8">
-          <Circles height="80" width="80" color="#AEB7C0" ariaLabel="loading" />
+          <Circles height="80" width="80" color="purple" ariaLabel="loading" />
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 text-black bg-white">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-2 text-black">
           {news.length > 0 ? (
             news.slice(0, 3).map((item) => (
               <div
                 key={item.id}
-                className="bg-gray shadow-lg rounded-lg p-6 flex items-start text-black"
+                className="bg-gray shadow-lg rounded-lg p-6 flex items-start text-black bg-gray-50"
               >
                 <div className="flex-shrink-0">
                   <FaBell className="text-purple-500 text-3xl" />

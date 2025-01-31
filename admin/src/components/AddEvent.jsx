@@ -26,7 +26,7 @@ const AddEvent = ({ onEventAdded }) => {
       });
 
       toast.success('Event created successfully!');
-      onEventAdded(response.data); // Update the events list with the new event
+      onEventAdded(response.data); 
       setTitle('');
       setContent('');
       setEventDate('');

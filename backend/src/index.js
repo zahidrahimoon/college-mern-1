@@ -1,10 +1,10 @@
 import express from 'express';
+import { v2 as cloudinary } from 'cloudinary';
 import { config } from 'dotenv';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import bodyParser from 'body-parser';
-import multer from 'multer';
 import newsRoutes from './routes/newsRoutes.js';
 import eventRoutes from './routes/eventRoutes.js';
 import facultyRoutes from './routes/facultyRoutes.js';
@@ -49,7 +49,32 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 
-app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
+// app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
+
+app.post('/upload', upload.single('image'), async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ error: "No file uploaded" });
+    }
+
+    console.log("File received:", req.file); // Debugging
+
+    // Use Multer's uploaded file path from Cloudinary
+    const imageUrl = req.file.path;  // ✅ Corrected (Cloudinary's URL)
+    const publicId = req.file.filename; // ✅ Cloudinary public ID
+
+    res.json({ url: imageUrl, public_id: publicId });
+  } catch (error) {
+    console.error("Upload error:", error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+cloudinary.uploader
+.upload("hat.jpg", { 
+  use_filename: true})
+.then(result=>console.log(result));
+
 
 
 // Use routes
@@ -73,7 +98,6 @@ app.use('/api/departments', departmentRoutes);
 
 // Function export for Vercel
 const handler = async (req, res) => {
-  // Use app as a handler
   app(req, res);
 };
 

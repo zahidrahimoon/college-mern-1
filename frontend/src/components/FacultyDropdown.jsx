@@ -25,10 +25,10 @@ const FacultyDropdown = ({ department, members }) => {
                 <div className="bg-white rounded-lg overflow-hidden shadow-md">
                 {member.image && (
                     <img 
-                      src={`${import.meta.env.VITE_BASE_URL}/uploads/${member.image}`} 
+                      src={`https://res.cloudinary.com/dzr3drmyk/image/upload/f_auto,q_auto/v1/${member.image}`} 
                       alt={member.name} 
                       className="w-full h-auto"
-                      onError={() => console.error(`Failed to load image: ${import.meta.env.VITE_BASE_URL}/uploads/${member.image}`)}
+                      onError={() => console.error(`Failed to load image: https://res.cloudinary.com/dzr3drmyk/image/upload/f_auto,q_auto/v1/uploads/${member.image}`)}
                     />
                   )}
                   <div className="p-4">

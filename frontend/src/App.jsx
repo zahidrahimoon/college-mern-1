@@ -1,4 +1,4 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header.jsx';
 import './App.css';
 import {
@@ -20,43 +20,44 @@ import SamplePaper from './Pages/SamplePaper.jsx';
 import Uniform from './Pages/Uniform.jsx';
 import StudentTimeTable from './Pages/StudentTimeTable.jsx';
 import MiniNavbar from './components/Mininavbar.jsx';
-// import Loader from './components/Loader.jsx'; 
+import Loader from './components/Loader.jsx';
 
 function App() {
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 500); 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 500); // Simulating data loading time
 
-  //   return () => clearTimeout(timer);
-  // }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/FacultyAndStaff" element={<FacultyAndStaff />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/faculty" element={<FacultyAndStaff />} />
         <Route path="/Academics" element={<Academics />} />
-        <Route path="/NewsAndUpdates" element={<NewsAndUpdates />} />
-        <Route path="/Galleries" element={<Galleries />} />
-        <Route path="/ContactUs" element={<ContactUs />} />
-        <Route path="/RegistrationForm" element={<RegistrationForm />} />
-        <Route path="/SamplePaper" element={<SamplePaper />} />
+        <Route path="/news" element={<NewsAndUpdates />} />
+        <Route path="/galleries" element={<Galleries />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/registrationform" element={<RegistrationForm />} />
+        <Route path="/samplepaper" element={<SamplePaper />} />
         <Route path="/uniform" element={<Uniform />} />
-        <Route path="/StudentTimeTable" element={<StudentTimeTable />} />
+        <Route path="/studenttimetable" element={<StudentTimeTable />} />
       </Route>
     )
   );
 
   return (
     <div>
-      {/* {loading ? (
+      {loading ? (
         <Loader />
-      ) : ( */}
+      ) : (
         <RouterProvider router={router} />
+      )}
     </div>
   );
 }

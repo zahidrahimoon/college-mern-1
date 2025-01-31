@@ -121,7 +121,7 @@ model EngXi {
 
 model MedXi {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  timeSlot  String
+  time_slot  String
   mon       String
   tue       String
   wed       String
