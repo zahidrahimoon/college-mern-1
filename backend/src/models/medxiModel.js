@@ -14,7 +14,7 @@ const updateMedXiData = async (id, data) => {
     const updatedData = await prisma.medXi.update({
       where: { id: parseInt(id) },
       data: {
-        timeSlot: data.time_slot,
+        time_slot: data.time_slot,
         mon: data.mon,
         tue: data.tue,
         wed: data.wed,
