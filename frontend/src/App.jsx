@@ -7,6 +7,7 @@ import {
   Route,
   RouterProvider,
   Outlet,
+  Navigate,
 } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
@@ -21,6 +22,7 @@ import Uniform from './Pages/Uniform.jsx';
 import StudentTimeTable from './Pages/StudentTimeTable.jsx';
 import MiniNavbar from './components/Mininavbar.jsx';
 import Loader from './components/Loader.jsx';
+import NotFound from './components/404'; // Import the 404 page component
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +49,7 @@ function App() {
         <Route path="/samplepaper" element={<SamplePaper />} />
         <Route path="/uniform" element={<Uniform />} />
         <Route path="/studenttimetable" element={<StudentTimeTable />} />
+        <Route path="*" element={<NotFound />} /> {/* Add the 404 page route */}
       </Route>
     )
   );
