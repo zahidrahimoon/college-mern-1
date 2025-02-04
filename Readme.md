@@ -1,16 +1,4 @@
-<p align="center">
-  <a href="https://github.com/zahidrahimoon/college-mern-1.git">
-    <img alt="GitHub commits" src="https://img.shields.io/github/commit-activity/m/yourusername/mern-college-website?style=for-the-badge">
-  </a>
-  <a href="https://github.com/yourusername/mern-college-website/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/yourusername/mern-college-website?style=for-the-badge">
-  </a>
-  <a href="https://github.com/yourusername/mern-college-website/network/members">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/yourusername/mern-college-website?style=for-the-badge">
-  </a>
-</p>
-
-# MERN College Website
+# Rahimoon Institude
 
 > **A Unique, Full-Stack MERN Project**  
 > This is a production-level project that includes a fully responsive frontend, a robust backend, and an intuitive admin panel. It is a comprehensive college website featuring all necessary pages and functionalities to serve as an academic portal.
