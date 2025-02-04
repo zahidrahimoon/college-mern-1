@@ -59,7 +59,7 @@ const ScheduleTable = ({ apiEndpoint, title }) => {
               <tbody>
                 {schedule.map((slot, index) => (
                   <tr key={index}>
-                    <td className="border px-4  border-gray-300">{slot.time_slot || slot.timeSlot}</td>
+                    <td className="border px-4  border-gray-300">{slot.time_slot ?? slot.timeSlot}</td>
                     <td className="border px-4 py-2 border-gray-300">{slot.mon}</td>
                     <td className="border px-4 py-2 border-gray-300">{slot.tue}</td>
                     <td className="border px-4 py-2 border-gray-300">{slot.wed}</td>
