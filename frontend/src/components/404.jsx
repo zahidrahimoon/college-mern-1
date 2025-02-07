@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-import { useFloatingBooks } from "../hooks/useFloatingBooks"
+import { useFloatingBooks } from "../hooks/useFloatingBooks.js"
 import { Book } from "lucide-react"
 
 export default function NotFound() {
