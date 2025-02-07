@@ -1,10 +1,14 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
-import { useFloatingBooks } from "../hooks/useFloatingBooks.js"
 import { Book } from "lucide-react"
 
 export default function NotFound() {
-  const books = useFloatingBooks(10)
+  const books = Array.from({ length: 10 }, (_, index) => ({
+    id: index,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    rotation: Math.random() * 360,
+  }));
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
